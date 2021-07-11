@@ -24,7 +24,7 @@ public class ClientesDAO {
         try {
             
             //Criar Comando sql
-            String sql = "insert into tb_clientes (nome, rg, cpf, email, telefone,cep,endereco,numero,complemento,bairro,cidade,estado)"
+            String sql = "insert into tb_clientes (nome,rg,cpf,email,telefone,celular,cep,endereco,numero,complemento,bairro,cidade,estado)"
                         + " values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
             
             //Conectar o banco de dados e organizar o comando sql
