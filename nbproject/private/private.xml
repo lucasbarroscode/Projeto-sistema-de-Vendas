@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/jdbc/ConnectionFactory.java</file>
-            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/model/Utilitarios.java</file>
             <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/view/FrmFuncionarios.java</file>
-            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/model/Clientes.java</file>
+            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/model/Funcionarios.java</file>
+            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/dao/FuncionariosDAO.java</file>
             <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/view/Frmcliente.java</file>
-            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/jdbc/TestaConexao.java</file>
-            <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/model/WebServiceCep.java</file>
             <file>file:/C:/Users/lucas/OneDrive/Documentos/NetBeansProjects/Projeto%20Vendas/src/br/com/projeto/dao/ClientesDAO.java</file>
         </group>
     </open-files>
