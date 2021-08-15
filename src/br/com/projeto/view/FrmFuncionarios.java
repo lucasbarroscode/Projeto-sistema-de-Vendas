@@ -667,18 +667,21 @@ public class FrmFuncionarios extends javax.swing.JFrame {
         // Botão pesquisar
 
         String nome = "%" + txtpesquisa.getText() + "%";
-        ClientesDAO dao = new ClientesDAO();
-        List<Clientes> lista = dao.buscaClientePorNome(nome);
+        FuncionariosDAO dao = new FuncionariosDAO();
+        List<Funcionarios> lista = dao.buscaFuncionarioPorNome(nome);
         DefaultTableModel dados = (DefaultTableModel) tabelaFuncionarios.getModel();
         dados.setNumRows((0));
 
-        for (Clientes c : lista) {
+        for (Funcionarios c : lista) {
             dados.addRow(new Object[]{
                 c.getId(),
                 c.getNome(),
                 c.getRg(),
                 c.getCpf(),
                 c.getEmail(),
+                c.getSenha(),
+                c.getCargo(),
+                c.getNivel_acesso(),
                 c.getTelefone(),
                 c.getCelular(),
                 c.getCep(),
@@ -694,18 +697,21 @@ public class FrmFuncionarios extends javax.swing.JFrame {
 
     private void txtpesquisaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpesquisaKeyPressed
         String nome = "%" + txtpesquisa.getText() + "%";
-        ClientesDAO dao = new ClientesDAO();
-        List<Clientes> lista = dao.buscaClientePorNome(nome);
+        FuncionariosDAO dao = new FuncionariosDAO();
+        List<Funcionarios> lista = dao.buscaFuncionarioPorNome(nome);
         DefaultTableModel dados = (DefaultTableModel) tabelaFuncionarios.getModel();
         dados.setNumRows((0));
 
-        for (Clientes c : lista) {
+        for (Funcionarios c : lista) {
             dados.addRow(new Object[]{
                 c.getId(),
                 c.getNome(),
                 c.getRg(),
                 c.getCpf(),
                 c.getEmail(),
+                c.getSenha(),
+                c.getCargo(),
+                c.getNivel_acesso(),
                 c.getTelefone(),
                 c.getCelular(),
                 c.getCep(),
@@ -725,11 +731,11 @@ public class FrmFuncionarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnbuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbuscaActionPerformed
-        // botão buscar cliente por nome
+        // botão buscar funcionario por nome
 
         String nome = txtnome.getText();
-        Clientes obj = new Clientes();
-        ClientesDAO dao = new ClientesDAO();
+        Funcionarios obj = new Funcionarios();
+        FuncionariosDAO dao = new FuncionariosDAO();
 
         obj = dao.consultaPorNome(nome);
 
@@ -740,6 +746,10 @@ public class FrmFuncionarios extends javax.swing.JFrame {
             txtrg.setText(obj.getRg());
             txtcpf.setText(obj.getCpf());
             txtemail.setText(obj.getEmail());
+            txtsenha.setText(obj.getSenha());
+            txtcargo.setText(obj.getCargo());
+            cbnivel.setSelectedItem(obj.getNivel_acesso());
+
             txttelefone.setText(obj.getTelefone());
             txtcelular.setText(obj.getCelular());
             txtcep.setText(obj.getCep());
@@ -751,7 +761,7 @@ public class FrmFuncionarios extends javax.swing.JFrame {
             cbuf.setSelectedItem(obj.getUf());
 
         } else {
-            JOptionPane.showMessageDialog(null, "Cliente não encontrado");
+            JOptionPane.showMessageDialog(null, "Funcionario não encontrado");
         }
 
     }//GEN-LAST:event_btnbuscaActionPerformed
